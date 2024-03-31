@@ -27,12 +27,8 @@ const UseCallback = () => {
   // }, [handleCallback]);
 
   return (
-    <div>
-      <input
-        type="number"
-        value={number}
-        onChange={(e) => setNumber(e.target.value)}
-      />
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
+      <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} />
       <button onClick={() => setToggle(!toggle)}>{toggle.toString()}</button>
       <br />
       <button onClick={handleCallback}>함수 부르기</button>

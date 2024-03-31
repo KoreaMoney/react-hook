@@ -14,7 +14,7 @@ const CustomHook2 = () => {
   const { data, apiUrl } = useFetch(BASEURL, "users");
 
   return (
-    <div>
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
       <h1>데이터를 가져오는 커스텀 훅</h1>
       <button onClick={() => apiUrl("users")}>Users</button>
       <button onClick={() => apiUrl("posts")}>Posts</button>

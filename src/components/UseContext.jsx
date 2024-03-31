@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Page from './useContext/Page';
-import { UsePage } from './useContext/UsePage';
+import React, { useState } from "react";
+import Page from "./useContext/Page";
+import { UsePage } from "./useContext/UsePage";
 /**
  * @brief useContext
  * @author Kim Dowon
@@ -19,16 +19,16 @@ import { UsePage } from './useContext/UsePage';
  */
 
 const UseContext = () => {
-    const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-    return (
-        <div>
-            {/* <Page isDark={isDark} setIsDark={setIsDark} /> */}
-            <UsePage.Provider value={{ isDark, setIsDark }}>
-                <Page />
-            </UsePage.Provider>
-        </div>
-    );
+  return (
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
+      {/* <Page isDark={isDark} setIsDark={setIsDark} /> */}
+      <UsePage.Provider value={{ isDark, setIsDark }}>
+        <Page />
+      </UsePage.Provider>
+    </div>
+  );
 };
 
 export default UseContext;

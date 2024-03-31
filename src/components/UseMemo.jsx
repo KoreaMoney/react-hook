@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 /**
  * @brief useMemo
  * @author Kim Dowon
@@ -17,44 +17,44 @@ import React, { useMemo, useState } from 'react';
  */
 
 const calculate = (number) => {
-    console.log('함수가 불러옵니다');
-    for (let i = 0; i < 999999999; i++) {
-        return number + 10000;
-    }
+  console.log("함수가 불러옵니다");
+  for (let i = 0; i < 999999999; i++) {
+    return number + 10000;
+  }
 };
 const otherCalculate = (otherNumber) => {
-    console.log('다른 함수가 불러옵니다');
-    for (let i = 0; i < 1000000; i++) {
-        return otherNumber + 1;
-    }
+  console.log("다른 함수가 불러옵니다");
+  for (let i = 0; i < 1000000; i++) {
+    return otherNumber + 1;
+  }
 };
 
 const UseMemo = () => {
-    const [number, setNumber] = useState(1);
-    const [otherNumber, setOtherNumber] = useState(1);
+  const [number, setNumber] = useState(1);
+  const [otherNumber, setOtherNumber] = useState(1);
 
-    // const sum = calculate(number);
-    const otherSum = otherCalculate(otherNumber);
+  // const sum = calculate(number);
+  const otherSum = otherCalculate(otherNumber);
 
-    const sum = useMemo(() => {
-        return calculate(number);
-    }, [number]);
+  const sum = useMemo(() => {
+    return calculate(number);
+  }, [number]);
 
-    // const otherSum = useMemo(() => {
-    //   return otherCalculate(otherNumber);
-    // }, [otherNumber]);
+  // const otherSum = useMemo(() => {
+  //   return otherCalculate(otherNumber);
+  // }, [otherNumber]);
 
-    return (
-        <div>
-            <h2>계산기</h2>
-            <input type="number" value={number} onChange={(e) => setNumber(parseInt(e.target.value))} />
-            <span> +10000 = {sum}</span>
+  return (
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
+      <h2>계산기</h2>
+      <input type="number" value={number} onChange={(e) => setNumber(parseInt(e.target.value))} />
+      <span> +10000 = {sum}</span>
 
-            <h2>다른 계산기</h2>
-            <input type="number" value={otherNumber} onChange={(e) => setOtherNumber(parseInt(e.target.value))} />
-            <span> +1 = {otherSum}</span>
-        </div>
-    );
+      <h2>다른 계산기</h2>
+      <input type="number" value={otherNumber} onChange={(e) => setOtherNumber(parseInt(e.target.value))} />
+      <span> +1 = {otherSum}</span>
+    </div>
+  );
 };
 
 export default UseMemo;

@@ -65,15 +65,10 @@ const UseReducer = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
       <h1>카카오 뱅크</h1>
       <p>잔고 : {money}원</p>
-      <input
-        type="number"
-        value={number}
-        onChange={handleMoneyManage}
-        step="1000"
-      />
+      <input type="number" value={number} onChange={handleMoneyManage} step="1000" />
       <button onClick={handleDeposit}>입금</button>
       <button onClick={handleWithdraw}>출금</button>
     </div>

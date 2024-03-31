@@ -38,15 +38,11 @@ const ReactMemo = () => {
   console.log("👨‍💻부모 컴포넌트가 렌더링이 됩니다");
 
   return (
-    <div style={{ border: "1px solid black", padding: "10px", width: "20rem" }}>
+    <div style={{ border: "1px solid black", padding: "10px", width: "20rem", backgroundColor: "lightblue" }}>
       <h1>부모컴포넌트 나이</h1>
       <p>age : {age}</p>
       <span>자식 이름 : </span>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
       <div>
         <button onClick={updateAge}>나이 업데이트</button>
         <button onClick={updateChildAge}>child 나이 업데이트</button>

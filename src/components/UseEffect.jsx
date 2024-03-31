@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 /**
  * @brief useMemo
  * @author Kim Dowon
@@ -18,46 +18,46 @@ import React, { useEffect, useState } from 'react';
  */
 
 const UseEffect = () => {
-    console.log('함수 전체가 렌더링됩니다');
-    const [count, setCount] = useState(0); // State 변경되면 rendering
-    const [name, setName] = useState('');
+  console.log("함수 전체가 렌더링됩니다");
+  const [count, setCount] = useState(0); // State 변경되면 rendering
+  const [name, setName] = useState("");
 
-    const handleCountUpdate = () => {
-        setCount(count + 1);
-    };
+  const handleCountUpdate = () => {
+    setCount(count + 1);
+  };
 
-    const handleInputChange = (e) => {
-        setName(e.target.value);
-    };
+  const handleInputChange = (e) => {
+    setName(e.target.value);
+  };
 
-    // 의존성 배열이 없는 경우
-    useEffect(() => {
-        console.log('렌더링을 합니다 🎢');
-    });
+  // 의존성 배열이 없는 경우
+  useEffect(() => {
+    console.log("렌더링을 합니다 🎢");
+  });
 
-    // // 의존성 배열만 있는 경우
-    // useEffect(() => {
-    //     console.log('렌더링을 합니다 🎢');
-    // }, []);
+  // // 의존성 배열만 있는 경우
+  // useEffect(() => {
+  //     console.log('렌더링을 합니다 🎢');
+  // }, []);
 
-    // // 의존성 배열이 있는 경우 (count일 경우)
-    // useEffect(() => {
-    //     console.log('숫자가 렌더링을 합니다 💡');
-    // }, [count]);
+  // // 의존성 배열이 있는 경우 (count일 경우)
+  // useEffect(() => {
+  //     console.log('숫자가 렌더링을 합니다 💡');
+  // }, [count]);
 
-    // // 의존성 배열이 있는 경우 (name일 경우)
-    // useEffect(() => {
-    //     console.log('이름이 렌더링을 합니다 📺');
-    // }, [name]);
+  // // 의존성 배열이 있는 경우 (name일 경우)
+  // useEffect(() => {
+  //     console.log('이름이 렌더링을 합니다 📺');
+  // }, [name]);
 
-    return (
-        <div>
-            <button onClick={handleCountUpdate}>update</button>
-            <span>업데이트 : {count}</span>
-            <input type="text" value={name} onChange={handleInputChange} />
-            <p>name : {name}</p>
-        </div>
-    );
+  return (
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
+      <button onClick={handleCountUpdate}>update</button>
+      <span>업데이트 : {count}</span>
+      <input type="text" value={name} onChange={handleInputChange} />
+      <p>name : {name}</p>
+    </div>
+  );
 };
 
 export default UseEffect;

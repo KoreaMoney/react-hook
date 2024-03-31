@@ -15,7 +15,7 @@ function displayMessage(message) {
 const CustomHook = () => {
   const [value, handleChange, handleSubmit] = useInput("", displayMessage);
   return (
-    <div>
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
       <h1>Custom-Hooks</h1>
       <input value={value} onChange={handleChange} />
       <button onClick={handleSubmit}>확인</button>

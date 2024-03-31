@@ -36,14 +36,11 @@ const UseRef = () => {
   // console.log("Ref값 올라갈까유? : ", countRef);
 
   return (
-    <div>
+    <div style={{ backgroundColor: "lightblue", fontSize: "20px" }}>
       <p>State : {render}</p>
       <p>useRef : {countRef.current}</p>
       {/* <button onClick={handleCountUpdate}>state값 올라갑니다</button> */}
-      <button onClick={handleRenderUpdate}>
-        리 랜더링 되유 값이 이제 바껴유
-      </button>
-
+      <button onClick={handleRenderUpdate}>리 랜더링 되유 값이 이제 바껴유</button>
       <button onClick={handleRefUpdate}>ref값 올라갑니다</button>
     </div>
   );
